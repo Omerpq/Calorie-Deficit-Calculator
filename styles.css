@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  border: 3px solid #007bff;
+}
+
+.title {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  border-radius: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: normal;
+  display: block;
+  margin-top: 0.5rem;
+  color: #f0f8ff;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #f79c42;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #e6892f;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-group div {
+  flex: 1;
+}
+
+.result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e9f5ff;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.result h3 {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 1rem;
+
+}
+
+#reportHeading, #report {
+  display: none;
+}
+
+#report {
+  padding-left: 1.5rem;
+}
+
+#report[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+#report[dir="rtl"] li {
+  list-style-position: inside;
+  font-family: 'Noto Naskh Arabic', Arial, sans-serif;
+  font-size: 1.1rem;
+}
+
+.signature {
+  margin-top: 1rem;
+  font-size: .8rem;
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-style: normal;
+}
+
+.signature strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.0rem;
+  color: #0056b3;
+  letter-spacing: 1px;
+}
+
+select.placeholder {
+  color: #a0a0a0;
+}
+
+select:not(.placeholder) {
+  color: #000;
+}
+
+/* Goal Buttons */
+.goal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.goal-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.goal-btn[data-goal="loss"] {
+  background: #ff6b6b;
+  color: white;
+}
+
+.goal-btn[data-goal="gain"] {
+  background: #4cd97b;
+  color: white;
+}
+
+.goal-btn.active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: 2px solid #007bff;
+}
